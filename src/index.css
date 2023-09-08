@@ -49,28 +49,42 @@ body {
   border: 2px solid black;
 }
 
+.selected {
+  transform: scale(1.5);
+}
+
 /* colors */
 .red {
-  background-color: #cf000f;
+  background-color: red;
 }
 .orange {
-  background-color: #eb6b56;
+  background-color: orange;
 }
 .yellow {
-  background-color: #ffc153;
+  background-color: yellow;
 }
 .green {
-  background-color: #27ae60;
+  background-color: green;
 }
 .blue {
-  background-color: #1d4fda;
-}
-.violet {
-  background-color: #462446;
+  background-color: blue;
 }
 .black {
-  background-color: #000000;
+  background-color: black;
 }
-.white {
-  background-color: #ffffff;
+
+@keyframes explode {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.color.selected {
+  animation: explode 0.3s;
 }
